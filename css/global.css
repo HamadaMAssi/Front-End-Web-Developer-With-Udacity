@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-main: "Poppins", sans-serif;
+  --color-bg: #fff5e4;
+  --color-bg-light: #fffbf4;
+  --color-text: #333;
+  --color-accent: #ef9258;
+  --color-primary: #2e7d32;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--color-text);
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* css for header section */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: var(--color-bg);
+}
+
+.logo {
+  background-color: var(--color-primary);
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: background-color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
+  -ms-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+}
+
+.logo:hover {
+  background-color: var(--color-accent);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  font-weight: 500;
+  transition: color 0.2s ease;
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
+  -ms-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+  color: var(--color-accent);
+}
+
+/* Hamburger Icon */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+.main-header nav.active {
+  display: flex;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform-origin: center;
+  transform: rotate(45deg) translate(5px, 5px);
+  margin: 0;
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform-origin: center;
+  transform: rotate(-45deg) translate(5px, -5px);
+  margin: 0;
+}
+
+.active-tab {
+  color: var(--color-accent);
+}
+
+.btn {
+  padding: 5px 15px;
+  font-size: 0.8rem;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
+  -ms-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+}
+
+.btn-order {
+  margin-left: 30px;
+  color: #fff;
+  background-color: var(--color-accent);
+}
+
+.btn-order:hover {
+  background-color: var(--color-primary);
+}
+
+.btn-view {
+  color: #fff;
+  background-color: var(--color-primary);
+  padding: 10px 20px;
+}
+
+.btn-view:hover {
+  background-color: var(--color-accent);
+}
+
+/* css for footer */
+footer {
+  background-color: var(--color-bg-light);
+  padding: 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.subscribe-box {
+  max-width: 400px;
+}
+
+.subscribe-box h2 {
+  margin-bottom: 10px;
+}
+
+.subscribe-box p {
+  margin-bottom: 15px;
+  color: var(--color-text);
+}
+
+.subscribe-box form {
+  display: flex;
+}
+
+.subscribe-box input[type="email"] {
+  font-size: 1.3rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  -ms-border-radius: 5px 0 0 5px;
+  -o-border-radius: 5px 0 0 5px;
+}
+
+.subscribe-box input[type="email"]:focus {
+  outline: 2px solid var(--color-primary);
+  border: none;
+}
+
+.subscribe-box button {
+  padding: 10px 16px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  -ms-border-radius: 0 5px 5px 0;
+  -o-border-radius: 0 5px 5px 0;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  -ms-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+}
+
+.subscribe-box button:hover {
+  opacity: 1;
+}
+
+footer h4 {
+  margin-bottom: 10px;
+}
+
+footer .links li {
+  margin-bottom: 10px;
+}
+
+footer .links li a {
+  font-weight: 500;
+  transition: color 0.2s ease;
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
+  -ms-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
+}
+
+footer .links li a:hover {
+  color: var(--color-accent);
+}
+
+.footer-bottom {
+  padding-top: 50px;
+}
+
+.footer-bottom p {
+  text-align: center;
+  margin: 0;
+  padding-top: 50px;
+  border-top: 3px solid var(--color-text);
+}
+
+/* media quires */
+@media (min-width: 1440px) {
+  body {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /* for toggle menu */
+  .menu-toggle {
+    display: flex;
+  }
+
+  .main-header nav {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: var(--color-bg-light);
+    width: 100%;
+    flex-direction: column;
+    padding: 20px 20px 40px;
+    z-index: 1;
+  }
+
+  .main-header nav ul {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .main-header nav ul li {
+    margin: 10px 0;
+  }
+
+  .main-header nav .btn-order {
+    margin: 10px 0 0;
+    width: 100%;
+    text-align: center;
+  }
+}
