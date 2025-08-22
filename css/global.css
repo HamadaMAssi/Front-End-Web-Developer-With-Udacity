@@ -338,4 +338,8 @@ footer .links li a:hover {
     width: 100%;
     text-align: center;
   }
+  .subscribe-box input[type="email"] {
+    font-size: 0.85rem;
+  }
 }
+
